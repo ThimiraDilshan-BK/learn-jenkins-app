@@ -35,9 +35,9 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            junit 'test-results/test-results.xml'
+    // post {
+    //     always {
+    //         junit 'test-results/test-results.xml'
             
-    }
+    // }
 }
