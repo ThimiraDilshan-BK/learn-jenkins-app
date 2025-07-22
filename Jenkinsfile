@@ -30,8 +30,7 @@ pipeline {
             steps{
                 sh '''
                     test -f build/index.html
-                    npm test
-                    // mkdir -p test-results
+                    npm test 
                         
                 '''
             }
@@ -39,7 +38,7 @@ pipeline {
     }
     post {
         always {
-            junit 'test-results/test-results.xml'
+            junit 'test-results/junit.xml'
             
     }
 }
