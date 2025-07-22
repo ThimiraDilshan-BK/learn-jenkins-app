@@ -31,13 +31,15 @@ pipeline {
                 sh '''
                     test -f build/index.html
                     npm test
+                    mkdir -p test-results
+                        
                 '''
             }
         }
     }
-    // post {
-    //     always {
-    //         junit 'test-results/test-results.xml'
+    post {
+        always {
+            junit 'test-results/test-results.xml'
             
-    // }
+    }
 }
