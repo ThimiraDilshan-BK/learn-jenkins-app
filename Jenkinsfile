@@ -89,6 +89,7 @@ pipeline {
                     node_modules/.bin/netlify --version
                     echo "Deploying to production. Site ID: 34316f28-60bc-44d8-bfae-0f63d444cfc3"
                     node_modules/.bin/netlify status
+                    node_modules/.bin/netlify deploy --dir=build --prod 
                 '''
             }
         }
