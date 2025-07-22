@@ -31,7 +31,7 @@ pipeline {
                 sh '''
                     test -f build/index.html
                     npm test
-                    mkdir -p test-results
+                    // mkdir -p test-results
                         
                 '''
             }
@@ -42,4 +42,5 @@ pipeline {
             junit 'test-results/test-results.xml'
             
     }
+}
 }
